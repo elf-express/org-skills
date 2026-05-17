@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/runkids/skillshare/main/schemas/project-config.schema.json
+targets:
+  - adal
+skills:
+  - name: algorithmic-art
+    source: github.com/anthropics/skills/skills/algorithmic-art
+  - name: brand-guidelines
+    source: github.com/anthropics/skills/skills/brand-guidelines
+  - name: canvas-design
+    source: github.com/anthropics/skills/skills/canvas-design
+audit:
+  block_threshold: CRITICAL
