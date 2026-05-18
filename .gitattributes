@@ -1,0 +1,36 @@
+# Default: text files use LF line endings (no CRLF on Windows checkout)
+* text=auto eol=lf
+
+# Explicit text files
+*.md       text eol=lf
+*.txt      text eol=lf
+*.yaml     text eol=lf
+*.yml      text eol=lf
+*.json     text eol=lf
+*.js       text eol=lf
+*.ts       text eol=lf
+*.html     text eol=lf
+*.css      text eol=lf
+*.sh       text eol=lf
+*.ps1      text eol=lf
+*.py       text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+.skillignore text eol=lf
+SKILL.md   text eol=lf
+LICENSE*   text eol=lf
+README*    text eol=lf
+
+# Binary files (do not touch)
+*.png      binary
+*.jpg      binary
+*.jpeg     binary
+*.gif      binary
+*.ico      binary
+*.pdf      binary
+*.ttf      binary
+*.otf      binary
+*.woff     binary
+*.woff2    binary
+*.zip      binary
+*.gz       binary
