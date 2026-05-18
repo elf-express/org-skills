@@ -1,1 +1,13 @@
-﻿.skillignore.local
+# Local skillshare overrides (not committed)
+.skillignore.local
+.agentignore.local
+
+# Skillshare sync artifacts (flattened tracked-repo outputs)
+.adal/skills/_*/
+.skillshare/skills/_*/
+.skillshare/skills/.gitignore
+
+# Skillshare runtime dirs (also handled by .skillshare/.gitignore)
+.skillshare/logs/
+.skillshare/trash/
+.skillshare/backups/
