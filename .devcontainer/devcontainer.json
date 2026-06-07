@@ -1,0 +1,3 @@
+{
+  "postCreateCommand": "curl -fsSL https://raw.githubusercontent.com/runkids/skillshare/main/install.sh | sh && skillshare init --no-copy --all-targets --no-skill && skillshare sync && skillshare sync -p"
+}

@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "entries": {
+    "AmazonBedrock/CONTRIBUTING": {
+      "source": "github.com/anthropics/prompt-eng-interactive-tutorial/AmazonBedrock/CONTRIBUTING.md",
+      "kind": "agent",
+      "type": "github-subdir",
+      "group": "AmazonBedrock",
+      "installed_at": "2026-06-08T00:59:11.5385457+08:00",
+      "repo_url": "https://github.com/anthropics/prompt-eng-interactive-tutorial.git",
+      "subdir": "AmazonBedrock/CONTRIBUTING.md",
+      "version": "0d27754",
+      "file_hashes": {
+        "CONTRIBUTING.md": "sha256:eb4eeb7bd4e9a8d99b67b744e5356a3681c42313b3789eb5f777b9d97d910abb"
+      }
+    }
+  }
+}

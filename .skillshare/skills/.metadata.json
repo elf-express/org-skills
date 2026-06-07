@@ -1,13 +1,37 @@
 {
   "version": 1,
   "entries": {
+    "agent-browser": {
+      "source": "github.com/runkids/my-skills/agent-browser/agent-browser",
+      "type": "github-subdir",
+      "installed_at": "2026-06-08T02:22:41.510648+08:00",
+      "repo_url": "https://github.com/runkids/my-skills.git",
+      "subdir": "agent-browser/agent-browser",
+      "version": "b02b405",
+      "tree_hash": "c1470a475a0472fceda2401ea6763708a91680a8",
+      "file_hashes": {
+        "SKILL.md": "sha256:ed4735913554955e457e59272e6dacd76c22505e2787407ebdc041ce77c52125"
+      }
+    },
+    "agentcore": {
+      "source": "github.com/runkids/my-skills/agent-browser/agentcore",
+      "type": "github-subdir",
+      "installed_at": "2026-06-08T02:22:43.1754275+08:00",
+      "repo_url": "https://github.com/runkids/my-skills.git",
+      "subdir": "agent-browser/agentcore",
+      "version": "b02b405",
+      "tree_hash": "03f6441b390f62136c02bc0aa2970a88b4f44088",
+      "file_hashes": {
+        "SKILL.md": "sha256:b693c3ff7d59ae76fd81d0fb826917e2e62fc3135e8bdcf5b3284441ca6cd96c"
+      }
+    },
     "algorithmic-art": {
       "source": "https://github.com/anthropics/skills.git/skills/algorithmic-art",
       "type": "github-subdir",
-      "installed_at": "2026-05-18T05:31:07.6019684+08:00",
+      "installed_at": "2026-06-08T02:22:44.9955175+08:00",
       "repo_url": "https://github.com/anthropics/skills.git",
       "subdir": "skills/algorithmic-art",
-      "version": "f458cee",
+      "version": "da20c92",
       "tree_hash": "4aef6bcad51d058ec32b1acb9da436851863e56e",
       "file_hashes": {
         "LICENSE.txt": "sha256:52b223c318576d65c32f70cb745f31352730e9f4c2c2c2570a66ce700f4f5a64",
@@ -19,10 +43,10 @@
     "brand-guidelines": {
       "source": "https://github.com/anthropics/skills.git/skills/brand-guidelines",
       "type": "github-subdir",
-      "installed_at": "2026-05-18T05:31:07.6558242+08:00",
+      "installed_at": "2026-06-08T02:22:46.8321381+08:00",
       "repo_url": "https://github.com/anthropics/skills.git",
       "subdir": "skills/brand-guidelines",
-      "version": "f458cee",
+      "version": "da20c92",
       "tree_hash": "1dc8bd3584b80568edae7da16382363e24ecf0f0",
       "file_hashes": {
         "LICENSE.txt": "sha256:52b223c318576d65c32f70cb745f31352730e9f4c2c2c2570a66ce700f4f5a64",
@@ -32,10 +56,10 @@
     "canvas-design": {
       "source": "https://github.com/anthropics/skills.git/skills/canvas-design",
       "type": "github-subdir",
-      "installed_at": "2026-05-18T05:31:08.2931132+08:00",
+      "installed_at": "2026-06-08T02:22:49.8723152+08:00",
       "repo_url": "https://github.com/anthropics/skills.git",
       "subdir": "skills/canvas-design",
-      "version": "f458cee",
+      "version": "da20c92",
       "tree_hash": "95095faaee2ea943e85a5d1d562fde06841e835e",
       "file_hashes": {
         "LICENSE.txt": "sha256:52b223c318576d65c32f70cb745f31352730e9f4c2c2c2570a66ce700f4f5a64",
@@ -121,6 +145,287 @@
         "canvas-fonts/WorkSans-Regular.ttf": "sha256:e67985a843df0d3cdee51a3d0f329eb1774a344ad9ff0c9ab923751f1577e2a4",
         "canvas-fonts/YoungSerif-OFL.txt": "sha256:0f15fb928a39deedb71e9198dbeece4403f827561b0cdbcff450aacbcf772212",
         "canvas-fonts/YoungSerif-Regular.ttf": "sha256:f8dc08f77abad753a00670af70756a8ace938e5c3f0b770f4f4c2071c4bd8fc6"
+      }
+    },
+    "diagnose": {
+      "source": "github.com/runkids/my-skills/mattpocock/diagnose",
+      "type": "github-subdir",
+      "installed_at": "2026-06-08T02:22:51.5457546+08:00",
+      "repo_url": "https://github.com/runkids/my-skills.git",
+      "subdir": "mattpocock/diagnose",
+      "version": "b02b405",
+      "tree_hash": "43d464d0e9d1049b9d525975c0f7367ab7e01a5f",
+      "file_hashes": {
+        "SKILL.md": "sha256:dd1506e36aa87c8c462a08fe139033dca4eed6673fc62527acb20e00f55da6b1",
+        "scripts/hitl-loop.template.sh": "sha256:a14e4d722c2324c130d331e87267bc9f9b03bbaf32c3b8e08310b039ea5e5863"
+      }
+    },
+    "docker-expert": {
+      "source": "github.com/runkids/my-skills/devops/docker-expert",
+      "type": "github-subdir",
+      "installed_at": "2026-06-08T02:22:53.1392098+08:00",
+      "repo_url": "https://github.com/runkids/my-skills.git",
+      "subdir": "devops/docker-expert",
+      "version": "b02b405",
+      "tree_hash": "45853e487ac0d45f8cded5d33ac97fa34d2f3c0a",
+      "file_hashes": {
+        "SKILL.md": "sha256:10ffac413cfc92a541442f987b1585cc39956d40c583060be37102fc2c2d09aa"
+      }
+    },
+    "dogfood": {
+      "source": "github.com/runkids/my-skills/agent-browser/dogfood",
+      "type": "github-subdir",
+      "installed_at": "2026-06-08T02:22:54.7904816+08:00",
+      "repo_url": "https://github.com/runkids/my-skills.git",
+      "subdir": "agent-browser/dogfood",
+      "version": "b02b405",
+      "tree_hash": "c818a5daf6e6ef6ec6375705df201499de4e6437",
+      "file_hashes": {
+        "SKILL.md": "sha256:ffeea8f3dc61ee13c0b922a8fff3e74694a4b5dc1bddd9f4fee9deea5ef4b90a",
+        "references/issue-taxonomy.md": "sha256:44a2eaa24904e083d60eccc1ea4bb451ffc7dc9a7ace9a331e5c596cbbe7130f",
+        "templates/dogfood-report-template.md": "sha256:ec15cbf4be09103e9170f126173d1a8bba1fb76102b8b9f0b931a27ceb6e594c"
+      }
+    },
+    "electron": {
+      "source": "github.com/runkids/my-skills/agent-browser/electron",
+      "type": "github-subdir",
+      "installed_at": "2026-06-08T02:22:56.5983614+08:00",
+      "repo_url": "https://github.com/runkids/my-skills.git",
+      "subdir": "agent-browser/electron",
+      "version": "b02b405",
+      "tree_hash": "79bf2fb6edfcf688931e6f1a444da144b835ccbd",
+      "file_hashes": {
+        "SKILL.md": "sha256:b34b4ee382ba759bdf5643460a2ea84d3f005040ce7c7f915b9e88102bbce0a2"
+      }
+    },
+    "feature-radar": {
+      "source": "github.com/runkids/my-skills/feature-radar/feature-radar",
+      "type": "github-subdir",
+      "installed_at": "2026-06-08T02:22:58.2547504+08:00",
+      "repo_url": "https://github.com/runkids/my-skills.git",
+      "subdir": "feature-radar/feature-radar",
+      "version": "b02b405",
+      "tree_hash": "8ce3efd8b8ef70f9d02d80185461302226b9f979",
+      "file_hashes": {
+        "SKILL.md": "sha256:4bd0a1b7649504d834dcf55c491edb73a767bcaec349b9af52069144db29bb56",
+        "references/DEEP-READ.md": "sha256:37c2c90e3975ede1e66c2e1d64c5051a7803bfeb93b5dc92e578b11e29200c19",
+        "references/DIRECTIVES.md": "sha256:8d689a53ca5647faa21d4d0f6a2c37b6a9afbd6e9ffaa399f87dde1d41c34806",
+        "references/SPEC.md": "sha256:f8997a1685bfee02630e286a41f3c48a4842142d704b87b12cfb4895ccfd463e",
+        "references/WORKFLOW-PATTERNS.md": "sha256:4bf3b0171d39a7018187a63eb1951430b511c14cad5e5dc7aa41f91cc9cb3010"
+      }
+    },
+    "feature-radar-archive": {
+      "source": "github.com/runkids/my-skills/feature-radar/feature-radar-archive",
+      "type": "github-subdir",
+      "installed_at": "2026-06-08T02:22:59.848706+08:00",
+      "repo_url": "https://github.com/runkids/my-skills.git",
+      "subdir": "feature-radar/feature-radar-archive",
+      "version": "b02b405",
+      "tree_hash": "16e85976107e866525bf6692481335def1d26184",
+      "file_hashes": {
+        "SKILL.md": "sha256:1239783855cbe1480d955e0c5e81f4a99068e6cdc7032174fb61fadf72ec8295"
+      }
+    },
+    "feature-radar-learn": {
+      "source": "github.com/runkids/my-skills/feature-radar/feature-radar-learn",
+      "type": "github-subdir",
+      "installed_at": "2026-06-08T02:23:01.4223562+08:00",
+      "repo_url": "https://github.com/runkids/my-skills.git",
+      "subdir": "feature-radar/feature-radar-learn",
+      "version": "b02b405",
+      "tree_hash": "a7015f2f174a2d9bb1ef33e6209cd3a867a51674",
+      "file_hashes": {
+        "SKILL.md": "sha256:d4b4e481dd601340fac457fdc8fbc8690ec41893fe9b23354a1629940efbb374"
+      }
+    },
+    "feature-radar-ref": {
+      "source": "github.com/runkids/my-skills/feature-radar/feature-radar-ref",
+      "type": "github-subdir",
+      "installed_at": "2026-06-08T02:23:02.9660295+08:00",
+      "repo_url": "https://github.com/runkids/my-skills.git",
+      "subdir": "feature-radar/feature-radar-ref",
+      "version": "b02b405",
+      "tree_hash": "eb43eec4bd8a375ba85432f2414fabaea2ff2189",
+      "file_hashes": {
+        "SKILL.md": "sha256:3168ee2bdb1651ab9f8d262f3723edc962dc852bf9277561607d3417289f2c1c"
+      }
+    },
+    "feature-radar-scan": {
+      "source": "github.com/runkids/my-skills/feature-radar/feature-radar-scan",
+      "type": "github-subdir",
+      "installed_at": "2026-06-08T02:23:04.5762711+08:00",
+      "repo_url": "https://github.com/runkids/my-skills.git",
+      "subdir": "feature-radar/feature-radar-scan",
+      "version": "b02b405",
+      "tree_hash": "e286551591ce468cc3b6e2d935d02dc400dae517",
+      "file_hashes": {
+        "SKILL.md": "sha256:5b233aeced8611e49764d8cb084d7f5391c2722e0bec8f69ca781e97853c5e71"
+      }
+    },
+    "grill-me": {
+      "source": "github.com/runkids/my-skills/mattpocock/grill-me",
+      "type": "github-subdir",
+      "installed_at": "2026-06-08T02:23:06.2215991+08:00",
+      "repo_url": "https://github.com/runkids/my-skills.git",
+      "subdir": "mattpocock/grill-me",
+      "version": "b02b405",
+      "tree_hash": "2a1ad17028306ebe45f0e49703fa28b9b2e7f499",
+      "file_hashes": {
+        "SKILL.md": "sha256:c9df326c4ab635765ea884471d21f4e21d5b0ec85aec43a06c238307841eb4bc"
+      }
+    },
+    "pdf": {
+      "source": "github.com/anthropics/skills/skills/pdf",
+      "type": "github-subdir",
+      "installed_at": "2026-06-08T02:23:08.0251572+08:00",
+      "repo_url": "https://github.com/anthropics/skills.git",
+      "subdir": "skills/pdf",
+      "version": "da20c92",
+      "tree_hash": "6369f4649de69bd6857c9bc3b058a77206009238",
+      "file_hashes": {
+        "LICENSE.txt": "sha256:6f8bd7f4d8ec5cb52b7a59ccb9e8c14c2a4ba529cb5adfc5e0bc676892b8ca79",
+        "SKILL.md": "sha256:067401220db5745f719ff8c048d545d5edc8545e809668a3a6f9e2892fa51d48",
+        "forms.md": "sha256:5415f531c0137e821dc44369f0f7354a8bc29abb26d2a5ccdfe5bef355f32124",
+        "reference.md": "sha256:16fbf406156feb08e2951403c03b1bfd76be5f2bc6bed1eed0d70c25954ab562",
+        "scripts/check_bounding_boxes.py": "sha256:da8ef6c5dac036b39636b1e9b89600f87791190873d21adbf518023deea49a0a",
+        "scripts/check_fillable_fields.py": "sha256:6575c07d6c687483013f5bcf429264d63639d4690279fb235cb01859c257a6aa",
+        "scripts/convert_pdf_to_images.py": "sha256:489abb23e89417d58b344c19a4cd6f846b6a79a1d453aa9349cc295339846838",
+        "scripts/create_validation_image.py": "sha256:7086c2951718080c74034ebbec31f2be136645a968674f0053e484138e7d94c8",
+        "scripts/extract_form_field_info.py": "sha256:1fd07e40d6ce7417df142e397da2036449b50a0d22e86ccb555cda3f145afb9a",
+        "scripts/extract_form_structure.py": "sha256:e81c6f43e3c253c8f5edaf277bbcdec70e1b5e133b675c6dbd35471438a5f550",
+        "scripts/fill_fillable_fields.py": "sha256:6691ee0fd6944a333e81c588bb53f07aa8a838ca6e1116ce7861677f348f2b52",
+        "scripts/fill_pdf_form_with_annotations.py": "sha256:a91969ba615747a32222aa3627cf0d4af70ad021bed440baac3707daab34a08f"
+      }
+    },
+    "react-best-practices": {
+      "source": "github.com/runkids/my-skills/frontend/react/react-best-practices",
+      "type": "github-subdir",
+      "installed_at": "2026-06-08T02:23:10.2675669+08:00",
+      "repo_url": "https://github.com/runkids/my-skills.git",
+      "subdir": "frontend/react/react-best-practices",
+      "version": "b02b405",
+      "tree_hash": "b9b98d3a76ad650ad97f5034c6d4e723e824e21e",
+      "file_hashes": {
+        "SKILL.md": "sha256:7ebc7eb069075ed895f6bc2d4d69cc4d243638df2edaa4458f7f72b738229e32",
+        "references/react-performance-guidelines.md": "sha256:cc0f5452b64f834be5c0d8251dada3907aa082d56f756df86e2c7b60f3a76efb",
+        "references/rules/_sections.md": "sha256:f352f75b84d6c6ee644c3fade99eaf2186bdfdc1d9e5b598bae436f32b3bce4f",
+        "references/rules/_template.md": "sha256:21231af1b4c70cfe6f07625830d982934295c735f91fddd9741b3a8e3688d735",
+        "references/rules/advanced-event-handler-refs.md": "sha256:ff14940a7943581723b763f49010ba2830697b0af0ea6fe4791f438a694b1131",
+        "references/rules/advanced-use-latest.md": "sha256:39732d02fb3915fe5984cfd935e1d9e247579276b4c133dd130c1166f94f0c92",
+        "references/rules/async-api-routes.md": "sha256:adf38ea4f34fa74b275b908e49aa20de20af9d9935b4a656314a49217b182663",
+        "references/rules/async-defer-await.md": "sha256:6a2b9e19555a17662755e01d129fa21b8c6a659731d860b7cc918ba47be2a942",
+        "references/rules/async-dependencies.md": "sha256:dc7a0e91c915996cc6c43ddd2a67555c1d5f215ebf88ccae0d65f0b68130e3a0",
+        "references/rules/async-parallel.md": "sha256:ff95abbb67b62a889d7ef71f1d06834238c47ecd3d49483f7823b4cd17d92680",
+        "references/rules/async-suspense-boundaries.md": "sha256:d8857f188e1c54660e430d308f374142f0db250dff076df0cfb2aa68eff3ec60",
+        "references/rules/bundle-barrel-imports.md": "sha256:f3a0d74c71aaa98547d970901d73d1bc4c082762e891244e9103def40846eecb",
+        "references/rules/bundle-conditional.md": "sha256:dbc0cf3fc70a2ae15949a5cdc8aee896e244a5d5c4127aef07fd73994ce05a04",
+        "references/rules/bundle-defer-third-party.md": "sha256:7cf36b752725d82a6c1ee8ede5504698ed63c01a9f4f4cd7d4ac004052af3ada",
+        "references/rules/bundle-dynamic-imports.md": "sha256:0fb947cdfec5ce0e95a894c6b68220f88983eff73ce65b98e4f00c885ebd9b36",
+        "references/rules/bundle-preload.md": "sha256:40d8adb386fff1a0866c52dbb355b57b625932bda4572f38f051034b5a462807",
+        "references/rules/client-event-listeners.md": "sha256:bafd0ee8e8f8dab9671cea0490816b4fb5a0293f0f5b28dfc1d66ca2526b29e3",
+        "references/rules/client-swr-dedup.md": "sha256:866e6cc267f06df39129c44c68c5e6a2e62faa554bc8cdb6ada1f58afe4bcbbe",
+        "references/rules/js-batch-dom-css.md": "sha256:e92bf11ba974f1e8be1b9a32ae34538049ddb532deeb4e33069c93ae1dcdffac",
+        "references/rules/js-cache-function-results.md": "sha256:96250356d0d7c1b4f7164d13342f86c20d0f662c98765a584b0bac59ed0620f9",
+        "references/rules/js-cache-property-access.md": "sha256:bbecc553a5b51caab2ddc90423a23d4c3245669439ff91e5204e48d62aaf1c5e",
+        "references/rules/js-cache-storage.md": "sha256:8e359202442e238d4cc0c45b9eb82df94e69e13d1a478f7b659db1217611d625",
+        "references/rules/js-combine-iterations.md": "sha256:c43a02979586d39f341fa6da7fc61bdd6a6917fa0c4f9c926091fa540cdf8022",
+        "references/rules/js-early-exit.md": "sha256:b6b967ab80d2a5fc19851d9db9464cf8e4d0e57dccb607a474b8f7818015951d",
+        "references/rules/js-hoist-regexp.md": "sha256:22d55c4a1d2f391b844c2d784e10ea689e69dcda54393ee2bd425dac311e3a97",
+        "references/rules/js-index-maps.md": "sha256:752dd0803a7394a70e8d437b7eb025d1e085566e30ad733e75b9d2e04cc6c4d9",
+        "references/rules/js-length-check-first.md": "sha256:7f0146c70f219f57d629113329fbe5c0918d967e6ae52a6fb3dda922a767f144",
+        "references/rules/js-min-max-loop.md": "sha256:4c55d8540e276f94e4a6520a46aa231286415efc05c515dcb47562e00587a787",
+        "references/rules/js-set-map-lookups.md": "sha256:7143f8d7b71cdbc77a171fc801bdcf5e7a209e0f471ff17bb669acc986a6b064",
+        "references/rules/js-tosorted-immutable.md": "sha256:ec27571264caecbaf970102ef7bc33536fd455310cbb3d49bc4940e36e00cff1",
+        "references/rules/rendering-activity.md": "sha256:e23dd494d955db99d376b5bf62a59ce7df9f14576d94094f2e53cfdc388453a0",
+        "references/rules/rendering-animate-svg-wrapper.md": "sha256:e7c74ca3f84118c5fb6b8cef1bf46ce99bc9ad71ed8529fda3253eb99eb848b6",
+        "references/rules/rendering-conditional-render.md": "sha256:7e185b05ef0d1dc5df8687b9c5a123df045c9551f6491799f8878345bdbd5023",
+        "references/rules/rendering-content-visibility.md": "sha256:0fa223eac3954b3d7e97cad36ad1bb021a077e590688101cf82a1e7f258c8c32",
+        "references/rules/rendering-hoist-jsx.md": "sha256:bb1ea01c4370b22da11bf6ca255c51162b9085dad9c1800b0f48f0de6762a526",
+        "references/rules/rendering-hydration-no-flicker.md": "sha256:bfedc3a73f9687c7836acf915165fb845880453b6dfcf2fa6475dfec96b23027",
+        "references/rules/rendering-svg-precision.md": "sha256:8d196b22bd640990b53e11e49850a9de8a04f89abf998f302855013449893ba2",
+        "references/rules/rerender-defer-reads.md": "sha256:bb98d9b7c7622641887df6407406a8c4f61510af9cc1bd275574ebee71bac8c8",
+        "references/rules/rerender-dependencies.md": "sha256:a389de1658fd51b077aeb208a59d199b75097a9d94e23cab059b45edddf3feca",
+        "references/rules/rerender-derived-state.md": "sha256:b1f838e388eb454a7a93bc739679c0104e6123453373decb11b5ae2c740a2d38",
+        "references/rules/rerender-lazy-state-init.md": "sha256:b8b9e6b6001a1e94979776e744eb38a98432858dd2369995731c9a095ecd1d2e",
+        "references/rules/rerender-memo.md": "sha256:15e9fb22d4d92111bb9189022666183e3dab43d13836bb62f466b1f5dfefd1bd",
+        "references/rules/rerender-transitions.md": "sha256:b51a82fb6b223d13c585dfddaeb753c79d7da0524da87b708f61fd6939600ab6",
+        "references/rules/server-cache-lru.md": "sha256:35528c4e3b441e0c2087a59f1ee7c27ecc2ed98efbe4c5ccc2107f37434fc0b8",
+        "references/rules/server-cache-react.md": "sha256:c56625f6ba3404dee7c07f72d935ccc897f0f086432ada5a28a4532f47999031",
+        "references/rules/server-parallel-fetching.md": "sha256:5bee59e87c6aa8ec53f11ae7da81ce7c2bb1e55ccbd9aabcc34381c694400297",
+        "references/rules/server-serialization.md": "sha256:b296e22a008c8a955203c76b45fb5bb93380197bc4a66fce95072b0facfb3b52"
+      }
+    },
+    "skillshare": {
+      "source": "github.com/runkids/my-skills/skillshare",
+      "type": "github-subdir",
+      "installed_at": "2026-06-08T02:23:12.2071997+08:00",
+      "repo_url": "https://github.com/runkids/my-skills.git",
+      "subdir": "skillshare",
+      "version": "b02b405",
+      "tree_hash": "dfa35504a4ad72632d1e956980a0a08c243820ef",
+      "file_hashes": {
+        "SKILL.md": "sha256:a288c415a1ffcaa61f462c42df143ed6cabc6e3b00fc9c609ae160af5989a784",
+        "references/TROUBLESHOOTING.md": "sha256:963ef806ee223dd4abe9e5cdf3911dc21d8cbba6ca545c3c72d18fb925d767ec",
+        "references/audit.md": "sha256:27c64924222212ca383a6426d842339c998a5b04a6ba8955de7af1108d854850",
+        "references/backup.md": "sha256:0daeea587726e8607f34bf77b0ecfe30542ee9b37a089400f9fc5b7faa361370",
+        "references/extras.md": "sha256:e829aeded61970f6a0b8168086a93a5948d92db73ebb657d6c32c2a84b7e5762",
+        "references/init.md": "sha256:2afba29bbaa6ea2d6b373f4e14cfdd6a1c93d53339226d42dd95902cbcd7b145",
+        "references/install.md": "sha256:15a71d885310efddf4f48cdd6c94e190af39d221f47911e6f040cb3abfc747ef",
+        "references/log.md": "sha256:882d3f3f94f8b3534cacfe4c9958c2649dccd84a80bca64392d6a77bddedf0c8",
+        "references/status.md": "sha256:0e97a2a3e648292b363207cf97e33915b33fe8f68fe59c81a36fd70c05d25fa5",
+        "references/sync.md": "sha256:9ee94fea65d41461b8dd277a7a197a63eb7ebbade183ebe108901c635cfca7f5",
+        "references/targets.md": "sha256:e918e52b19baf4c93e4e9920070dc9f67173213a5d4e94cca920afc8cb5d077e",
+        "references/trash.md": "sha256:e4d00cab0541297d2773aac41660ecc95416721bfc3c7fac4e7677f000cafccf",
+        "scripts/run.sh": "sha256:ce5532a4ab4fc64f3fcc24a6af1775508020bcd0c5c1c3c20e023b65f5ce3131"
+      }
+    },
+    "slack": {
+      "source": "github.com/runkids/my-skills/agent-browser/slack",
+      "type": "github-subdir",
+      "installed_at": "2026-06-08T02:23:13.9382496+08:00",
+      "repo_url": "https://github.com/runkids/my-skills.git",
+      "subdir": "agent-browser/slack",
+      "version": "b02b405",
+      "tree_hash": "b61acf1a637c9cd5ebfc2ec90b8be68ae6fa0e7e",
+      "file_hashes": {
+        "SKILL.md": "sha256:209fd64256cb4aeead172273b8e78a2f82b6b163df943e4f7c43294c9b115ec8",
+        "references/slack-tasks.md": "sha256:dcb3441d1ec163df95cc079ef4f93859f55ad9ad83c6572a1ffe5e9a74cd45e1",
+        "templates/slack-report-template.md": "sha256:25bb30ef7d4a98a39145d305c65e0412b4e4230fa9c6e6d64ec34a95e9ee6ded"
+      }
+    },
+    "superpowers/_superpowers": {
+      "source": "https://github.com/obra/superpowers.git",
+      "tracked": true,
+      "group": "superpowers",
+      "branch": "main"
+    },
+    "tdd": {
+      "source": "github.com/runkids/my-skills/mattpocock/tdd",
+      "type": "github-subdir",
+      "installed_at": "2026-06-08T02:23:15.6544229+08:00",
+      "repo_url": "https://github.com/runkids/my-skills.git",
+      "subdir": "mattpocock/tdd",
+      "version": "b02b405",
+      "tree_hash": "75beb3030b4c979205dd771ff85ac600baeb68f4",
+      "file_hashes": {
+        "SKILL.md": "sha256:95f66cc273f0dff4919d4251cd6572f0029cd551167d38024b4867f6b2816eba",
+        "deep-modules.md": "sha256:76a813f34910d2431478652a92080d74e325b0f09e6ca3df39cf4d7b170576b7",
+        "interface-design.md": "sha256:560c35db2cae66ebfa1b0f120d287666d7a12039ddda4b59613207ddf290fed4",
+        "mocking.md": "sha256:73a10b6a26b56197c738a764c1e4205af98c74553f4a713795997f6bc35b917d",
+        "refactoring.md": "sha256:7e94dbf6d1e14a778770cf1fb8f45e10449910eac1cc30f84f70890edeed4538",
+        "tests.md": "sha256:0ea0dcd32d5ad1d1ccd157baa3acf207507136592480bbef013b33b318a7526e"
+      }
+    },
+    "vercel-sandbox": {
+      "source": "github.com/runkids/my-skills/agent-browser/vercel-sandbox",
+      "type": "github-subdir",
+      "installed_at": "2026-06-08T02:23:17.3619997+08:00",
+      "repo_url": "https://github.com/runkids/my-skills.git",
+      "subdir": "agent-browser/vercel-sandbox",
+      "version": "b02b405",
+      "tree_hash": "914c0dbdcc5f7408a840b29125625b11e6459390",
+      "file_hashes": {
+        "SKILL.md": "sha256:c4bde103e961ac10ee84e15d99700ee3597ba1b7d9c2a08d1b8db6d6f41caf9e"
       }
     }
   }

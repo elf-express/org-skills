@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/runkids/skillshare/main/schemas/project-config.schema.json
+targets:
+  - name: openclaw
+    skills:
+      mode: copy
+skills:
+  - name: api
+    source: github.com/elf-express/org-skills/backend/api
+  - name: deploy
+    source: github.com/elf-express/org-skills/devops/deploy
+  - name: ui
+    source: github.com/elf-express/org-skills/frontend/ui
+audit:
+  block_threshold: CRITICAL

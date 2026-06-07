@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "entries": {
+    "api": {
+      "source": "github.com/elf-express/org-skills/backend/api",
+      "type": "github-subdir",
+      "installed_at": "2026-06-08T02:12:47.7250988+08:00",
+      "repo_url": "https://github.com/elf-express/org-skills.git",
+      "subdir": "backend/api",
+      "version": "6788ec7",
+      "tree_hash": "9b73211652d2902df56ae5122d2f065e615ece0a",
+      "file_hashes": {
+        "SKILL.md": "sha256:53469d01a1685b86990ee5643e1fbaac242bb26c15869c3f61d2251fd532a38a"
+      }
+    },
+    "deploy": {
+      "source": "github.com/elf-express/org-skills/devops/deploy",
+      "type": "github-subdir",
+      "installed_at": "2026-06-08T02:12:47.7726378+08:00",
+      "repo_url": "https://github.com/elf-express/org-skills.git",
+      "subdir": "devops/deploy",
+      "version": "6788ec7",
+      "tree_hash": "7ddd2c16f1ca0820579c22934847793a8c7c1353",
+      "file_hashes": {
+        "SKILL.md": "sha256:a659dc3e87f41c755617b4648a20e2d8d6ec314906c21c36909233b1ac402d20"
+      }
+    },
+    "ui": {
+      "source": "github.com/elf-express/org-skills/frontend/ui",
+      "type": "github-subdir",
+      "installed_at": "2026-06-08T02:12:47.8045059+08:00",
+      "repo_url": "https://github.com/elf-express/org-skills.git",
+      "subdir": "frontend/ui",
+      "version": "6788ec7",
+      "tree_hash": "10e8fa1b1bf698bb71702a4a68e43071aab94265",
+      "file_hashes": {
+        "SKILL.md": "sha256:4f415178ee95533c6e83de13ff72ebf59f73a29bb5f6a688d4aca516cc2c392a"
+      }
+    }
+  }
+}

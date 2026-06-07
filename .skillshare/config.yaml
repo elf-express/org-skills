@@ -1,6 +1,11 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/runkids/skillshare/main/schemas/project-config.schema.json
 targets:
   - adal
+  - name: claude
+    skills:
+      mode: merge
+  - xcode-codex
+  - universal
 skills:
   - name: algorithmic-art
     source: github.com/anthropics/skills/skills/algorithmic-art
@@ -8,5 +13,46 @@ skills:
     source: github.com/anthropics/skills/skills/brand-guidelines
   - name: canvas-design
     source: github.com/anthropics/skills/skills/canvas-design
+  - name: pdf
+    source: github.com/anthropics/skills/skills/pdf
+  - name: agent-browser
+    source: github.com/runkids/my-skills/agent-browser/agent-browser
+  - name: agentcore
+    source: github.com/runkids/my-skills/agent-browser/agentcore
+  - name: diagnose
+    source: github.com/runkids/my-skills/mattpocock/diagnose
+  - name: docker-expert
+    source: github.com/runkids/my-skills/devops/docker-expert
+  - name: dogfood
+    source: github.com/runkids/my-skills/agent-browser/dogfood
+  - name: electron
+    source: github.com/runkids/my-skills/agent-browser/electron
+  - name: feature-radar
+    source: github.com/runkids/my-skills/feature-radar/feature-radar
+  - name: feature-radar-archive
+    source: github.com/runkids/my-skills/feature-radar/feature-radar-archive
+  - name: feature-radar-learn
+    source: github.com/runkids/my-skills/feature-radar/feature-radar-learn
+  - name: feature-radar-ref
+    source: github.com/runkids/my-skills/feature-radar/feature-radar-ref
+  - name: feature-radar-scan
+    source: github.com/runkids/my-skills/feature-radar/feature-radar-scan
+  - name: grill-me
+    source: github.com/runkids/my-skills/mattpocock/grill-me
+  - name: react-best-practices
+    source: github.com/runkids/my-skills/frontend/react/react-best-practices
+  - name: skillshare
+    source: github.com/runkids/my-skills/skillshare
+  - name: slack
+    source: github.com/runkids/my-skills/agent-browser/slack
+  - name: tdd
+    source: github.com/runkids/my-skills/mattpocock/tdd
+  - name: vercel-sandbox
+    source: github.com/runkids/my-skills/agent-browser/vercel-sandbox
+  - name: _superpowers
+    source: https://github.com/obra/superpowers.git
+    tracked: true
+    group: superpowers
+    branch: main
 audit:
   block_threshold: CRITICAL
