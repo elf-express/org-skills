@@ -1,6 +1,12 @@
 {
   "version": 1,
   "entries": {
+    "affaan-m/ECC/_affaan-m": {
+      "source": "https://github.com/affaan-m/ECC.git",
+      "tracked": true,
+      "group": "affaan-m/ECC",
+      "branch": "main"
+    },
     "agent-browser": {
       "source": "github.com/runkids/my-skills/agent-browser/agent-browser",
       "type": "github-subdir",

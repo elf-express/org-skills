@@ -1,0 +1,31 @@
+{
+    // === 換行符規範(對應 .gitattributes 與 .editorconfig) ===
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+
+    // === 副檔名專屬:Windows 專屬批次檔保留 CRLF ===
+    "[bat]": { "files.eol": "\r\n" },
+    "[powershell]": { "files.eol": "\r\n" },
+
+    // === Markdown 保留行尾空白(對應 .editorconfig [*.md]) ===
+    "[markdown]": { "files.trimTrailingWhitespace": false },
+
+    // === Code Spell Checker:本 repo 領域詞白名單(消除 "Unknown word" 誤報) ===
+    "cSpell.words": [
+        "adal",
+        "affaan",
+        "agentignore",
+        "anthropics",
+        "codex",
+        "devcontainer",
+        "frontmatter",
+        "msys",
+        "runkids",
+        "skillignore",
+        "skillshare",
+        "ssot",
+        "superpowers",
+        "xcode"
+    ]
+}

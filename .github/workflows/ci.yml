@@ -1,0 +1,53 @@
+name: CI
+
+# =============================================================================
+# org-skills CI — 對齊團隊範本 team-project-template/.github/workflows/ci.yml
+# 本 repo 是 skillshare 派發倉庫(無 build/test),故僅保留與內容相關的基礎檢查。
+# 之後若要加 commit lint / 機密掃描等,可比照範本 basics job 補上。
+# =============================================================================
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+# 取消同分支上仍在跑的舊 workflow,避免浪費資源
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  basics:
+    name: Basics (file check)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 20
+
+      # 換行符規範檢查(LF for text、CRLF only for Windows .bat/.cmd/.ps1)
+      # 規範來源:.gitattributes;腳本與團隊範本同步,請勿在此分歧
+      - name: Check line endings (LF enforcement)
+        run: node .github/scripts/check-line-endings.mjs
+
+      - name: Check for large files (> 5MB)
+        run: |
+          LARGE_FILES=$(find . -type f -size +5M -not -path "./.git/*" || true)
+          if [ -n "$LARGE_FILES" ]; then
+            echo "::error::發現大檔案(>5MB),請考慮使用 Git LFS:"
+            echo "$LARGE_FILES"
+            exit 1
+          fi
+          echo "未發現大檔案"

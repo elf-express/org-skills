@@ -1,8 +1,8 @@
 ---
 name: writing-plans
 description: Use when you have a spec or requirements for a multi-step task, before touching code
+when_to_use: 當您在接觸程式碼之前對多步驟任務有規範或要求時使用
 ---
-
 # Writing Plans
 
 ## Overview

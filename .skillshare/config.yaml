@@ -54,5 +54,10 @@ skills:
     tracked: true
     group: superpowers
     branch: main
+  - name: _affaan-m
+    source: https://github.com/affaan-m/ECC.git
+    tracked: true
+    group: affaan-m/ECC
+    branch: main
 audit:
   block_threshold: CRITICAL

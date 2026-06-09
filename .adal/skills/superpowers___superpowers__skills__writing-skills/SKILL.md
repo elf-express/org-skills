@@ -1,8 +1,8 @@
 ---
 name: writing-skills
 description: Use when creating new skills, editing existing skills, or verifying skills work before deployment
+when_to_use: 在創建新技能、編輯現有技能或在部署之前驗證技能的運作時使用
 ---
-
 # Writing Skills
 
 ## Overview
