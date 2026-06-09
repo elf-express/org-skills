@@ -2,63 +2,79 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## What this repo is
+本檔案是 Claude Code 在 **org-skills** 進行任務時的常駐指引。風格與規範對齊團隊範本 `team-project-template`(繁體中文、結論先行、規範資產化)。
 
-`elf-express/org-skills` is a **[skillshare](https://github.com/runkids/skillshare)-managed distribution repo**, not an application. It aggregates AI "skills" (`SKILL.md` files) from upstream repos plus the team's own, and syncs them into one directory per AI CLI (`.adal/`, `.claude/`, `.codex/`, `.agents/`).
+---
 
-There is **no package.json, no build, no test suite, no linter.** Do not look for one. The `skillshare` CLI is the build tool; git is the delivery mechanism.
+## 0. 本專案性質
 
-## Golden rule
+`elf-express/org-skills` 是 **[skillshare](https://github.com/runkids/skillshare) 管理的「skill 派發倉庫」**,不是應用程式。它把各上游 repo 與團隊自製的 AI skill(`SKILL.md`)彙整後,同步到各家 AI CLI 的目錄(`.adal/`、`.claude/`、`.codex/`、`.agents/`)。
 
-[.skillshare/config.yaml](.skillshare/config.yaml) is the single source of truth. To change which skills exist or where they go: **edit `config.yaml`, then run `skillshare sync`.**
+- ❌ 沒有 `package.json`、沒有 build / test / lint。**不要找建置系統。**
+- ✅ **skillshare CLI 是建置工具,git 是派發機制。**
 
-**Never hand-edit files under `.adal/`, `.claude/`, `.codex/`, or `.agents/`** — those are generated symlinks into the cache (see Architecture). Edits there either silently mutate the cached source through the link or get clobbered on the next sync. Real edits belong in:
-- [.skillshare/skills/](.skillshare/skills/) `<group>/` — for the team's own (local) skills
-- the upstream repo — for vendored skills
+---
 
-## Common commands
+## 1. 常用指令
 
-Run from the repo root. All accept `--dry-run`/`-n` to preview and `--help`/`-h`.
+於 repo 根目錄執行;多數指令支援 `--dry-run` / `-n` 預覽、`--help` / `-h`。
 
-```powershell
-skillshare sync                 # regenerate all targets from config.yaml (the "build")
-skillshare sync --dry-run       # preview what sync would change
-skillshare status               # show what's out of sync
-skillshare diff                 # source-vs-target differences
-skillshare list                 # list all skills
-skillshare audit                # security scan (config blocks sync at CRITICAL)
-skillshare doctor               # diagnose broken skills / symlinks
-skillshare update --all         # pull latest for tracked sources, then sync
-skillshare new <name>           # scaffold a new local skill
+```bash
+skillshare sync              # 依 config.yaml 重新產生所有 target(等同「build」)
+skillshare sync --dry-run    # 預覽 sync 會改什麼
+skillshare status            # 顯示哪裡未同步
+skillshare diff              # source 與 target 差異
+skillshare list              # 列出所有 skill
+skillshare audit             # 安全掃描(config 設 CRITICAL 即擋 sync)
+skillshare doctor            # 診斷壞掉的 skill / symlink
+skillshare update --all      # 更新 tracked 來源後再 sync
+skillshare new <name>        # 建立新的本地 skill
 ```
 
-There is no separate "validate" step — the closest equivalents are `skillshare sync --dry-run`, `skillshare audit`, and `skillshare doctor`. Full command reference is mirrored in [docs/wiki/54 Commands.md](docs/wiki/54%20Commands.md).
+- **沒有傳統的「跑單一測試」**;最接近的驗證是 `skillshare sync --dry-run`、`skillshare audit`、`skillshare doctor`。
+- **換行符檢查**(CI 也會跑):`node .github/scripts/check-line-endings.mjs`
+- 完整 skillshare 指令參考鏡像於 [docs/wiki/54 Commands.md](docs/wiki/54%20Commands.md)。
 
-Git workflow: branch is **`main`**, remote is `elf-express/org-skills`. `skillshare commit`/`push`/`pull` are thin git wrappers that also run sync; plain `git` works too.
+git:預設分支 **`main`**,remote `elf-express/org-skills`。`skillshare commit` / `push` / `pull` 是會順帶 sync 的 git 包裝,純 `git` 亦可。
 
-## Architecture
+---
 
-**Config → cache → targets**, in three layers:
+## 2. 架構地圖
 
-1. **Config** — [.skillshare/config.yaml](.skillshare/config.yaml) declares `targets` (which CLIs to sync to) and `skills` (sources, by GitHub path or local). [.skillshare/skills/.metadata.json](.skillshare/skills/.metadata.json) records the resolved version/hash of each fetched source.
-2. **Source cache** — [.skillshare/skills/](.skillshare/skills/)`<group>/…/SKILL.md` holds the actual skill content: cloned upstreams (e.g. `affaan-m/`, `agent-browser/`) and the team's local skills (`api/` = `acme-api`, `deploy/` = `acme-deploy`, `ui/`).
-3. **Targets** — each target dir (`.adal/skills/`, `.claude/skills/`, `.codex/skills/`, `.agents/skills/`) is a flat set of **symlinks** into the cache. Names are flattened with `__` separators and a `<group>___` prefix that preserves origin, e.g. `affaan-m__ECC___affaan-m__.agents__skills__api-design`. The `managed` map in each target's `.skillshare-manifest.json` records every symlink skillshare owns.
+**config → cache → targets** 三層:
 
-Target mapping (from `config.yaml`): `adal`→`.adal/`, `claude` (merge mode)→`.claude/`, `xcode-codex`→`.codex/`, `universal`→`.agents/`.
+1. **設定層** — [.skillshare/config.yaml](.skillshare/config.yaml) 是**單一事實來源(SSOT)**,宣告 `targets`(同步到哪些 CLI)與 `skills`(來源)。[.skillshare/skills/.metadata.json](.skillshare/skills/.metadata.json) 記錄每個來源解析到的版本 / hash。
+2. **來源快取** — [.skillshare/skills/](.skillshare/skills/)`<group>/…/SKILL.md` 存實際內容:clone 下來的上游 + 團隊自製本地 skill(如 `api/`=`acme-api`、`deploy/`=`acme-deploy`、`ui/`)。
+3. **目標層** — 各 target 目錄(`.adal/skills/`、`.claude/skills/`、`.codex/skills/`、`.agents/skills/`)是一堆指回 cache 的 **symlink**,檔名以 `__` 攤平、前綴 `<group>___` 保留來源。每個 target 的 `.skillshare-manifest.json` 記錄 skillshare 管的每條 symlink。
 
-Tracked sources (`tracked: true` + `branch`, e.g. `_superpowers`, `_affaan-m`) are full repos kept on a branch and updated via `skillshare update`; untracked ones are pinned single-skill snapshots.
+>  **鐵則:改東西改在 `config.yaml` + cache / 上游,然後 `skillshare sync`。`.adal/`、`.claude/`、`.codex/`、`.agents/` 是產生物(symlink),手改會被覆蓋、或穿過 link 改到 cache。**
 
-> The skill list Claude Code shows you aggregates project + user-level (`~/.claude/skills/`) + plugin skills. Not every available skill is defined in this repo — this repo's skills are those reachable from `config.yaml` / the cache.
+target 對應(來自 config.yaml):`adal`→`.adal/`、`claude`(merge 模式)→`.claude/`、`xcode-codex`→`.codex/`、`universal`→`.agents/`。tracked 來源(`tracked: true` + `branch`,如 `_superpowers`、`_affaan-m`)是整包跟分支、用 `skillshare update` 更新;未 tracked 的是釘住的單一 skill 快照。
 
-## docs/
+> Claude Code 顯示的 skill 清單同時來自 專案 + 使用者層(`~/.claude/skills/`)+ plugin,**不是每個都來自本 repo**;本 repo 的 skill 以 `config.yaml` / cache 為準。
 
-- [docs/wiki/](docs/wiki/) — `01`–`58`, **machine-translated read-only snapshots** of skillshare's official docs. Prose is auto-translated (Chinese, often rough); fenced code blocks stay English and are the reliable part. **Do not edit the translated prose** — they're verbatim snapshots (slated to be compiled into an MCP). Use them as a skillshare reference.
-- [docs/superpowers/specs/](docs/superpowers/specs/) — design records for changes to *this* repo, dated `YYYY-MM-DD-<topic>.md`. (Singular `superpowers/` here is the repo's own design log, distinct from the vendored `superpowers` skill set.)
+---
 
-## Conventions & gotchas
+## 3. 文件(docs/)
 
-- **LF everywhere.** [.gitattributes](.gitattributes) forces `eol=lf` on all text files. On Windows, don't reintroduce CRLF.
-- **Selective tracking of generated output.** [.gitignore](.gitignore) ignores `_*/` group dirs under `.adal/skills/` and `.skillshare/skills/`, but group-*named* outputs (`superpowers___*`, `affaan-m__*`) **are** committed. So target dirs are partly tracked, partly regenerated — check `.gitignore` before assuming a synced file is or isn't in git.
-- **Discovery filtering.** [.skillignore](.skillignore) excludes patterns (e.g. `ci-scripts`, `_internal-*`) from skill discovery; `.skillignore.local` is the personal, gitignored override.
-- **SKILL.md frontmatter** must include `name` and `description`. When adding a local skill, namespace `name` (the team uses an `elf-`/`acme-` style prefix) to avoid collisions across tracked repos — `skillshare sync` warns on duplicate names.
-- After a first push or remote change, confirm the remote actually received it with `git ls-remote origin` — a clean push log isn't proof.
+- [docs/wiki/](docs/wiki/) — `01`–`58`,skillshare 官方文件的**機翻唯讀快照**。內文是機器翻譯(常不通順),fenced code block 維持英文且較可靠。**不要編輯翻譯內文**(逐字快照,預計編成 MCP),當 skillshare 參考即可。
+- [docs/superpowers/specs/](docs/superpowers/specs/) — 本 repo 變更的設計紀錄,檔名 `YYYY-MM-DD-<主題>.md`。(註:團隊範本用單數 `docs/superpower/{plan,spec}`,本 repo 實際是複數 `docs/superpowers/specs/`;引用前先 Glob 確認。)
+
+---
+
+## 4. 慣例與規範
+
+- **換行符**:[.gitattributes](.gitattributes) 預設 `eol=lf`;Windows 腳本 `.bat` / `.cmd` / `.ps1` 為 `eol=crlf`。[.editorconfig](.editorconfig) 與 [.vscode/settings.json](.vscode/settings.json) 在編輯器端同步此規則,CI 的 [check-line-endings.mjs](.github/scripts/check-line-endings.mjs) 是守門。⚠️ CI 看的是「commit 進去的 blob 換行」;Windows 工作區即使顯示 CRLF,只要 blob 是 LF(`git ls-files --eol` 看 `i/`)就 OK。
+- **選擇性追蹤產生物**:[.gitignore](.gitignore) 忽略 `.adal/skills/` 與 `.skillshare/skills/` 下的 `_*/` 群組目錄,但**群組命名**的輸出(`superpowers___*`、`affaan-m__*`)有追蹤。改 synced 檔前先看 .gitignore 確認它在不在 git 內。
+- **探索過濾**:[.skillignore](.skillignore) 排除某些 pattern 不被當 skill;`.skillignore.local` 是個人覆寫(已 gitignore)。
+- **SKILL.md frontmatter** 必含 `name` 與 `description`;新增本地 skill 時 `name` 加前綴(團隊用 `elf-` / `acme-` 風格)避免跨 repo 撞名,`skillshare sync` 撞名會警告。
+
+---
+
+## 5. 與 Claude 協作偏好(對齊團隊範本 §11)
+
+- **語言**:溝通與 commit 訊息預設**繁體中文**。
+- **回覆**:精簡、結論先行;檔案引用用 `[檔名](路徑#L行號)`。
+- **不擅自越權**:不主動 `git push --force` / `git reset --hard` / 刪分支;commit / push 前先確認(尤其推到團隊共用 remote)。
+- **Verify-before-claim**:宣稱「OK / 通過 / 修好 / 不存在」前,要有對應 tool 的 raw output 為證(例:push 後用 `git ls-remote` 對 local HEAD)。
+- **Windows + MSYS bash 路徑**:用小寫 drive + 冒號 + 正斜線(`e:/source/org-skills`);不確定先 Glob,不要硬猜。

@@ -1,0 +1,38 @@
+# =========================================
+# EditorConfig - 跨編輯器統一程式碼格式
+# https://editorconfig.org/
+# (對齊團隊範本 team-project-template/.editorconfig)
+# =========================================
+
+root = true
+
+# 全域預設
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+
+# Web 前端 / TypeScript / JavaScript / JSON / YAML
+[*.{ts,tsx,js,jsx,mjs,cjs,vue,json,jsonc,yml,yaml,html,css,scss,less}]
+indent_size = 2
+
+# Markdown - 保留行尾空白（用於換行）
+[*.{md,mdx}]
+trim_trailing_whitespace = false
+indent_size = 2
+
+# Shell
+[*.{sh,bash}]
+indent_size = 2
+end_of_line = lf
+
+# PowerShell / Windows 批次檔強制 CRLF
+[*.{ps1,psm1,psd1}]
+indent_size = 4
+end_of_line = crlf
+
+[*.{bat,cmd}]
+end_of_line = crlf
