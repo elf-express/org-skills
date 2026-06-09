@@ -1,0 +1,5 @@
+- [一致性優先於彈性](feedback_consistency_first.md) — 寫 SKILL/規範時先給定本 + 偏離條件,不要給選項自選
+- [org-skills 倉庫的目的與架構](project_org_skills_purpose.md) — elf-express/org-skills 的分支、命名、目錄、選型備忘
+- [首次 push 後用 git ls-remote 驗證](feedback_git_push_verification.md) — push 輸出說成功不等於遠端真收到,新 repo / 切換 remote 後加一行 ls-remote 驗證
+- [docs/wiki 文件要做成 MCP](project_wiki_docs_to_mcp.md) — skillshare 抓取+機翻快照,已編號 01–58,鐵則不改原文,目標編成 MCP
+- [team-project-template 是團隊規範 SSOT](project_team_template_ssot.md) — 團隊範本/規範單一事實來源(git workflow、commit、LF 三層、CLAUDE.md 風格),org-skills 需對齊
