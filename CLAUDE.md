@@ -4,7 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 本檔案是 Claude Code 在 **org-skills** 進行任務時的常駐指引。風格與規範對齊團隊範本 `team-project-template`(繁體中文、結論先行、規範資產化)。
 
-> 📒 **記憶(memory)**:本 repo 累積的記憶在根目錄 [`memory/`](memory/)([`MEMORY.md`](memory/MEMORY.md) 為索引),動手前先看。**共同記憶**(跨專案,如「一致性優先」)源頭在團隊範本 `team-project-template/memory/`,本 repo 留鏡像;其餘為 org-skills **專案特有**記憶。Claude Code 自動載入 `MEMORY.md`;其他 AI 工具請主動讀取。
+> 📒 **記憶(memory)**:記憶在根目錄 [`memory/`](memory/)(`MEMORY.md` 為索引),由下面這行 `@import` 每次 session 載入。**共同記憶**源頭在團隊範本 `team-project-template/memory/`,本 repo 留鏡像;其餘為 org-skills 專案特有。(Claude 各機器的自動 auto-memory 另存本地,設計上不進版控。)
+
+@memory/MEMORY.md
 
 ---
 
