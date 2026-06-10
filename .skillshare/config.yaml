@@ -53,11 +53,6 @@ skills:
     source: github.com/runkids/my-skills/mattpocock/tdd
   - name: vercel-sandbox
     source: github.com/runkids/my-skills/agent-browser/vercel-sandbox
-  - name: _superpowers
-    source: https://github.com/obra/superpowers.git
-    tracked: true
-    group: superpowers
-    branch: main
   - name: frontend-design
     source: github.com/anthropics/skills/skills/frontend-design
   - name: tauri-v2
@@ -74,10 +69,6 @@ skills:
     source: github.com/anthropics/skills/skills/internal-comms
   - name: copy-editing
     source: github.com/coreyhaines31/marketingskills/copy-editing
-  - name: _skills
-    source: https://github.com/antfu/skills.git
-    tracked: true
-    branch: main
   - name: readme-i18n
     source: github.com/xixu-me/skills/readme-i18n
 audit:
