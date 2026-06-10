@@ -1,0 +1,8 @@
+name: "CodeQL config"
+
+# 只分析 JavaScript，移除 Python 以修復 "no source code found" 錯誤
+languages:
+  - javascript
+
+queries:
+  - uses: security-and-quality
