@@ -80,7 +80,5 @@ skills:
     branch: main
   - name: readme-i18n
     source: github.com/xixu-me/skills/readme-i18n
-  - name: baoyu-url-to-markdown
-    source: github.com/JimLiu/baoyu-skills/baoyu-url-to-markdown
 audit:
   block_threshold: CRITICAL
