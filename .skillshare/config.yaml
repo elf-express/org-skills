@@ -3,8 +3,13 @@ targets:
   - name: claude
     skills:
       mode: merge
-  - xcode-codex
-  - opencode
+      target_naming: flat
+  - name: xcode-codex
+    skills:
+      target_naming: flat
+  - name: opencode
+    skills:
+      target_naming: flat
 skills:
   - name: algorithmic-art
     source: github.com/anthropics/skills/skills/algorithmic-art
@@ -53,5 +58,29 @@ skills:
     tracked: true
     group: superpowers
     branch: main
+  - name: frontend-design
+    source: github.com/anthropics/skills/skills/frontend-design
+  - name: tauri-v2
+    source: github.com/nodnarbnitram/claude-code-extensions/.claude/skills/tauri-v2
+  - name: tauri-frontend-js
+    source: github.com/dchuk/claude-code-tauri-skills/tauri/tauri-frontend-js
+  - name: mcp-builder
+    source: github.com/anthropics/skills/skills/mcp-builder
+  - name: webapp-testing
+    source: github.com/anthropics/skills/skills/webapp-testing
+  - name: web-artifacts-builder
+    source: github.com/anthropics/skills/skills/web-artifacts-builder
+  - name: internal-comms
+    source: github.com/anthropics/skills/skills/internal-comms
+  - name: copy-editing
+    source: github.com/coreyhaines31/marketingskills/copy-editing
+  - name: _skills
+    source: https://github.com/antfu/skills.git
+    tracked: true
+    branch: main
+  - name: readme-i18n
+    source: github.com/xixu-me/skills/readme-i18n
+  - name: baoyu-url-to-markdown
+    source: github.com/JimLiu/baoyu-skills/baoyu-url-to-markdown
 audit:
   block_threshold: CRITICAL
