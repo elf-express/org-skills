@@ -1,1 +1,0 @@
-../../.skillshare/agents/vue-reviewer.md

@@ -1,1 +1,0 @@
-../../.skillshare/agents/tauri-helper.md
