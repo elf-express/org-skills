@@ -1,129 +1,115 @@
 # elf-express / org-skills
 
-Organization-wide AI skills for the **elf-express** team — distributed via [skillshare](https://github.com/runkids/skillshare).
+elf-express 團隊的 **AI skill 共用倉庫**,透過 [skillshare](https://github.com/runkids/skillshare) 把同一套 skill 派發到各家 AI CLI(Claude Code、OpenAI Codex、opencode)。
 
-This repo ships:
-
-- **Custom skills** (this repo)
-  - `frontend/ui` — Frontend UI patterns
-  - `backend/api` — Backend API patterns
-  - `devops/deploy` — Deployment patterns
-- **Vendored skills** (mirrored from upstream, under `.adal/skills/`)
-  - `algorithmic-art`, `brand-guidelines`, `canvas-design` (from [anthropics/skills](https://github.com/anthropics/skills))
+> **為什麼有這個 repo:全團隊共用同一套 skill**,讓每個人用 AI 產出的結果都照同一套規範——避免各自用自己的、專案風格分歧。要改規範就改這個 repo(走 PR),全隊一起同步。
 
 ---
 
-## For Team Members — Install
+## 這個倉庫有什麼
 
-> Requires [skillshare](https://github.com/runkids/skillshare) CLI.
+- **Vue / Tauri 全套**:antfu 全家桶(vue、pinia、vite、vitest、nuxt、vueuse、slidev…)+ Tauri(tauri-v2、tauri-frontend-js)
+- **通用精選**:frontend-design、開發方法論(superpowers)、anthropics / runkids 官方 skill
+- **團隊自製 skill**:目前無(要建用 `skillshare new`,`name` 加 `acme-` 前綴)
+- **同步目標(targets)**:`claude`(Claude Code)、`xcode-codex`(OpenAI Codex)、`opencode`
 
-### One-time setup (recommended: tracked install)
+---
 
-```powershell
+## 團隊成員 — 訂閱
+
+> 需要 [skillshare](https://github.com/runkids/skillshare) CLI。
+
+### 1. 一次性訂閱(tracked)
+
+```bash
 skillshare install github.com/elf-express/org-skills --track
 skillshare sync
 ```
 
-### Only need a subset?
+私有 repo 改用 SSH:
 
-```powershell
-skillshare install github.com/elf-express/org-skills --all --exclude devops-deploy
+```bash
+skillshare install git@github.com:elf-express/org-skills.git --track
 ```
 
-### Daily — keep up to date
+### 2. 定期保持同步(常跑)
 
-```powershell
+```bash
 skillshare update --all
 skillshare sync
 ```
 
----
+`update --all` 把本機的 org-skills 更新到最新的 `main`,`sync` 重新派發到你的 AI CLI——跑完,你手上的 skill 就跟團隊一致。
 
-## Repo Layout
+### 3. 要改規範?開 PR,別在本機改
 
-```
-org-skills/
-├── frontend/
-│   └── ui/SKILL.md            ──►  flattened to: _org-skills__frontend__ui
-├── backend/
-│   └── api/SKILL.md           ──►  flattened to: _org-skills__backend__api
-├── devops/
-│   └── deploy/SKILL.md        ──►  flattened to: _org-skills__devops__deploy
-├── .adal/skills/
-│   ├── algorithmic-art/       (vendored from anthropics/skills)
-│   ├── brand-guidelines/      (vendored from anthropics/skills)
-│   └── canvas-design/         (vendored from anthropics/skills)
-├── .skillignore               (exclude internal/CI helpers from discovery)
-└── .skillshare/config.yaml    (project-mode config, for repo maintainers)
-```
-
-skillshare auto-flattens nested folders so any AI CLI sees a flat skill list. The `_org-skills__` prefix preserves origin path for traceability.
+在**這個 repo** 改 skill → 開 PR → 合併後,大家跑一次步驟 2 就拿到。**這是讓全隊維持同一版、不分歧的關鍵。**
 
 ---
 
-## Excluding skills from discovery
+## 常用命令
 
-Add patterns to `.skillignore` at the repo root:
+> 都在 repo 根目錄執行;多數支援 `--dry-run` / `-n` 預覽、`--help` / `-h`。本專案**沒有**傳統 build / test / lint——skillshare 就是建置工具,git 是派發機制。
 
-```
-# CI/CD helpers — not installable skills
-ci-scripts
-_internal-*
-```
-
-Individual developers can locally override with `.skillignore.local` (already gitignored):
-
-```
-!_internal-my-tool
-```
+| 命令 | 用途 |
+|---|---|
+| `skillshare status` | 看哪些 target 還沒同步 |
+| `skillshare diff` | 看來源與 target 的差異 |
+| `skillshare sync` | 依 `config.yaml` 重新派發(等同「build」) |
+| `skillshare sync --dry-run` | 預覽 sync 會改什麼(最接近「測試」) |
+| `skillshare update --all` | 更新所有 tracked 來源後再同步 |
+| `skillshare search <關鍵字>` | 搜 GitHub 上含 `SKILL.md` 的 skill(可直接裝) |
+| `skillshare ui start` | 開 web dashboard(背景),網址 `http://127.0.0.1:19420` |
+| `skillshare install <來源> --track` | 加一個新的 tracked 來源 |
+| `skillshare list` | 列出所有 skill |
+| `skillshare audit` | 安全掃描(掃到 CRITICAL 會擋 sync) |
+| `skillshare doctor` | 診斷壞掉的 skill / symlink |
 
 ---
 
-## For Maintainers
+## 維護者 — 加 / 改 skill
 
-### Add a new skill
+### 加團隊自製 skill
 
-1. Create folder: `<category>/<skill-name>/SKILL.md`
-2. SKILL.md frontmatter must include `name` and `description`:
+1. 用 `skillshare new <name>` 建立,或手動建 `.skillshare/skills/<name>/SKILL.md`
+2. frontmatter 必含 `name` 與 `description`,`name` **加前綴**避免跨 repo 撞名:
    ```yaml
    ---
-   name: my-skill
-   description: What this skill does
+   name: acme-my-skill
+   description: 這個 skill 做什麼
    ---
    ```
-3. Commit + push.
+3. `skillshare sync` → commit → 開 PR
 
-### Naming / collision avoidance
+### 加第三方來源
 
-When two skills share the same `name`, `skillshare sync` warns. Either:
-- Namespace the `name` field (e.g. `elf-frontend-ui`), or
-- Route with target `include`/`exclude` filters in consumer configs.
+在 `.skillshare/config.yaml` 的 `skills:` 加 `source:`(或用 `skillshare ui` / `skillshare search` 抓,**記得選 project**):
 
-### Private clones
-
-SSH (dev machines):
-
-```powershell
-skillshare install git@github.com:elf-express/org-skills.git --track
+```yaml
+  - name: vue-best-practices
+    source: github.com/antfu/skills/skills/vue-best-practices
 ```
 
-HTTPS + token (CI):
+整包跟著分支的用 `tracked: true` + `group:`(例如 `superpowers`)。
 
-```powershell
-$env:GITHUB_TOKEN = "ghp_xxx"
-skillshare install https://github.com/elf-express/org-skills.git --track
+### 排除某些檔不被當 skill
+
+在 `.skillignore` 加 pattern;`.skillignore.local` 是個人覆寫(已 gitignore)。
+
+### 命名 / 避免撞名
+
+兩個 skill `name` 相同時 `skillshare sync` 會警告。團隊自製一律加前綴(`acme-` / `elf-`)。
+
+### 私有 repo(CI 用 token)
+
+```bash
+GITHUB_TOKEN=ghp_xxx skillshare install https://github.com/elf-express/org-skills.git --track
 ```
 
 ---
 
-## Best Practices
+## 鐵則
 
-**Team leads**
-- Organize by function (`frontend/`, `backend/`, `devops/`)
-- Namespace skill `name` fields to avoid collisions
-- Tag stable releases for version pinning
+> 改東西改在 `.skillshare/config.yaml` + 上游,然後 `skillshare sync`。各 target 目錄(`.claude/`、`.codex/`、`.opencode/`)是**產生物(symlink)**,手改會被覆蓋。
 
-**Team members**
-- Run `skillshare update --all` daily
-- Report broken skills in this repo''s Issues
-- Open PRs to improve / add skills
+更完整的架構與協作規範見 [CLAUDE.md](CLAUDE.md)。
