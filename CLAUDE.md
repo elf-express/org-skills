@@ -49,7 +49,7 @@ git:預設分支 **`main`**,remote `elf-express/org-skills`。`skillshare commit
 
 1. **設定層** — [.skillshare/config.yaml](.skillshare/config.yaml) 是**單一事實來源(SSOT)**,宣告 `targets`(同步到哪些 CLI)與 `skills`(來源)。[.skillshare/skills/.metadata.json](.skillshare/skills/.metadata.json) 記錄每個來源解析到的版本 / hash。
 2. **來源快取** — [.skillshare/skills/](.skillshare/skills/)`<group>/…/SKILL.md` 存實際內容:clone 下來的上游 + 團隊自製本地 skill(如 `api/`=`acme-api`、`deploy/`=`acme-deploy`、`ui/`)。
-3. **目標層** — 各 target 目錄(`.adal/skills/`、`.claude/skills/`、`.codex/skills/`、`.agents/skills/`)是一堆指回 cache 的 **symlink**,檔名以 `__` 攤平、前綴 `<group>___` 保留來源。每個 target 的 `.skillshare-manifest.json` 記錄 skillshare 管的每條 symlink。
+3. **目標層** — 各 target 目錄(`.adal/skills/`、`.claude/skills/`、`.codex/skills/`、`.agents/skills/`)是一堆指回 cache 的 **symlink**,檔名以 `__` 攤平、前綴 `<group>___` 保留來源。每個 target 的 manifest 位在 **`<target>/skills/.skillshare-manifest.json`**(例:[.claude/skills/.skillshare-manifest.json](.claude/skills/.skillshare-manifest.json)),記錄 skillshare 管的每條 symlink。`.claude/settings.json`(Claude Code 設定)有版控、非 symlink、不由 sync 產生,改它不受「鐵則」限制。
 
 >  **鐵則:改東西改在 `config.yaml` + cache / 上游,然後 `skillshare sync`。`.adal/`、`.claude/`、`.codex/`、`.agents/` 是產生物(symlink),手改會被覆蓋、或穿過 link 改到 cache。**
 
