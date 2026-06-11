@@ -13,3 +13,9 @@ type: project
 - **根治**:升級 skillshare 到 ≥ v0.19.12(2026-06 本機已升 **v0.20.10**);升級前別再跑 `skillshare sync` / `update` 以免復發。
 - **遮蔽坑**:本機曾同時有 `/usr/local/bin/skillshare`(手動二進位,`which` 命中)與 `/opt/homebrew/bin/skillshare`(brew);PATH 中前者較前,`brew upgrade` 後 `which` 仍指舊的。升級時兩份都要顧,或 `sudo rm /usr/local/bin/skillshare` 統一交給 brew。
 - **殘留物**:該次 migration 會在 `.skillshare/registry.yaml` 留下未追蹤的孤兒檔;新版正確模型 SSOT 仍是 `config.yaml` 的 `skills:`。相關背景見 [[org-skills 倉庫的目的與架構]]。
+
+**2026-06-11 補充:跨 config 變種(v0.20.12 仍存在)**:同一台機器**同時有 global(`~/.config/skillshare`)+ project(`<repo>/.skillshare`)**時,在「一個 mode」跑 `install`/`sync`,會**清空「另一個 mode」的 `config.yaml` 的 `skills:` 區塊**(cache 與 target symlink 不受影響、功能仍在,但 SSOT 聲明被抹)。當天踩兩次:global `install` 清掉 project、project `install -p` 清掉 global。
+
+**鐵律**:本機跑**任何** `install`/`sync` 後,立刻 `grep -c '^  - name:' <另一個 config>` 比對數量;被清就**直接用 `cat >`/編輯把 `skills:` 補回**(別再跑 install/sync,否則反向再清一次)。要徹底免疫:同機器只維護**一種** mode。
+
+**實測確認的目錄規範**(只讀的 `skillshare list` 安全、不觸發此 bug):skillshare **只認** `<cwd>/.skillshare/`(cwd 有它就走 project mode)與 `~/.config/skillshare/`(global),**不會讀專案下自建的 `.config/skillshare/`**——專案專屬配置一律用 `.skillshare/`。另:`~/.config/skillshare` 是 **skillshare 建的**(非 Claude;Claude 自己的是 `~/.claude/`),skillshare 透過 target 的 `path` 把 skill 派發進 `~/.claude/skills` 等,merge mode + `.skillshare-manifest.json` 只動自己的 symlink、保留別人的實體 skill。

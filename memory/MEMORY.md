@@ -3,4 +3,5 @@
 - [首次 push 後用 git ls-remote 驗證](feedback_git_push_verification.md) — push 輸出說成功不等於遠端真收到,新 repo / 切換 remote 後加一行 ls-remote 驗證
 - [docs/wiki 文件要做成 MCP](project_wiki_docs_to_mcp.md) — skillshare 抓取+機翻快照,已編號 01–58,鐵則不改原文,目標編成 MCP
 - [team-project-template 是團隊規範 SSOT](project_team_template_ssot.md) — 團隊範本/規範單一事實來源(git workflow、commit、LF 三層、CLAUDE.md 風格),org-skills 需對齊
-- [skillshare <0.19.12 靜默刪 config skills 的 bug](project_skillshare_silent_skills_bug.md) — project-mode 指令會悄悄清掉 config 的 skills、看似刪數千筆;升級 ≥0.19.12(現用 v0.20.10),git restore 可救
+- [skillshare 靜默刪 config skills 的 bug](project_skillshare_silent_skills_bug.md) — <0.19.12 會清 config skills;v0.20.12 仍有跨 config 變種(global↔project 互相清),操作後比對 config 數、git restore/cat 補回
+- [skillshare 操作照官方文檔規範、別試錯](feedback_skillshare_follow_docs.md) — 先讀 doc 按規範一次到位,別 UI 逐個點/憑感覺試,否則孤兒、灌錯、清空 config 連鎖踩雷
