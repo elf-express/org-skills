@@ -4,7 +4,7 @@
     "agent-browser": {
       "source": "https://github.com/runkids/my-skills.git/agent-browser/agent-browser",
       "type": "github-subdir",
-      "installed_at": "2026-06-11T05:11:53.588322+08:00",
+      "installed_at": "2026-06-11T08:53:11.475273+08:00",
       "repo_url": "https://github.com/runkids/my-skills.git",
       "subdir": "agent-browser/agent-browser",
       "version": "6003d18",
@@ -16,7 +16,7 @@
     "agentcore": {
       "source": "https://github.com/runkids/my-skills.git/agent-browser/agentcore",
       "type": "github-subdir",
-      "installed_at": "2026-06-11T05:11:55.126286+08:00",
+      "installed_at": "2026-06-11T08:53:11.488495+08:00",
       "repo_url": "https://github.com/runkids/my-skills.git",
       "subdir": "agent-browser/agentcore",
       "version": "6003d18",
@@ -28,7 +28,7 @@
     "algorithmic-art": {
       "source": "https://github.com/anthropics/skills.git/skills/algorithmic-art",
       "type": "github-subdir",
-      "installed_at": "2026-06-11T05:11:58.257084+08:00",
+      "installed_at": "2026-06-11T08:53:10.27621+08:00",
       "repo_url": "https://github.com/anthropics/skills.git",
       "subdir": "skills/algorithmic-art",
       "version": "5754626",
@@ -43,7 +43,7 @@
     "brand-guidelines": {
       "source": "https://github.com/anthropics/skills.git/skills/brand-guidelines",
       "type": "github-subdir",
-      "installed_at": "2026-06-11T05:11:59.880511+08:00",
+      "installed_at": "2026-06-11T08:53:10.292143+08:00",
       "repo_url": "https://github.com/anthropics/skills.git",
       "subdir": "skills/brand-guidelines",
       "version": "5754626",
@@ -56,7 +56,7 @@
     "canvas-design": {
       "source": "https://github.com/anthropics/skills.git/skills/canvas-design",
       "type": "github-subdir",
-      "installed_at": "2026-06-11T05:12:01.789389+08:00",
+      "installed_at": "2026-06-11T08:53:10.380307+08:00",
       "repo_url": "https://github.com/anthropics/skills.git",
       "subdir": "skills/canvas-design",
       "version": "5754626",
@@ -150,7 +150,7 @@
     "copy-editing": {
       "source": "github.com/coreyhaines31/marketingskills/copy-editing",
       "type": "github-subdir",
-      "installed_at": "2026-06-11T05:12:04.95906+08:00",
+      "installed_at": "2026-06-11T08:53:17.653489+08:00",
       "repo_url": "https://github.com/coreyhaines31/marketingskills.git",
       "subdir": "skills/copy-editing",
       "version": "4b377f2",
@@ -166,7 +166,7 @@
     "diagnose": {
       "source": "https://github.com/runkids/my-skills.git/mattpocock/diagnose",
       "type": "github-subdir",
-      "installed_at": "2026-06-11T05:12:06.39529+08:00",
+      "installed_at": "2026-06-11T08:53:11.502843+08:00",
       "repo_url": "https://github.com/runkids/my-skills.git",
       "subdir": "mattpocock/diagnose",
       "version": "6003d18",
@@ -179,7 +179,7 @@
     "docker-expert": {
       "source": "https://github.com/runkids/my-skills.git/devops/docker-expert",
       "type": "github-subdir",
-      "installed_at": "2026-06-11T05:12:07.952277+08:00",
+      "installed_at": "2026-06-11T08:53:11.519984+08:00",
       "repo_url": "https://github.com/runkids/my-skills.git",
       "subdir": "devops/docker-expert",
       "version": "6003d18",
@@ -191,7 +191,7 @@
     "dogfood": {
       "source": "https://github.com/runkids/my-skills.git/agent-browser/dogfood",
       "type": "github-subdir",
-      "installed_at": "2026-06-11T05:12:09.572467+08:00",
+      "installed_at": "2026-06-11T08:53:11.535722+08:00",
       "repo_url": "https://github.com/runkids/my-skills.git",
       "subdir": "agent-browser/dogfood",
       "version": "6003d18",
@@ -205,7 +205,7 @@
     "electron": {
       "source": "https://github.com/runkids/my-skills.git/agent-browser/electron",
       "type": "github-subdir",
-      "installed_at": "2026-06-11T05:12:10.98966+08:00",
+      "installed_at": "2026-06-11T08:53:11.548488+08:00",
       "repo_url": "https://github.com/runkids/my-skills.git",
       "subdir": "agent-browser/electron",
       "version": "6003d18",
@@ -217,7 +217,7 @@
     "feature-radar": {
       "source": "github.com/runkids/my-skills/feature-radar/feature-radar",
       "type": "github-subdir",
-      "installed_at": "2026-06-11T05:12:12.604257+08:00",
+      "installed_at": "2026-06-11T08:53:21.641132+08:00",
       "repo_url": "https://github.com/runkids/my-skills.git",
       "subdir": "feature-radar/feature-radar",
       "version": "6003d18",
@@ -233,7 +233,7 @@
     "feature-radar-archive": {
       "source": "github.com/runkids/my-skills/feature-radar/feature-radar-archive",
       "type": "github-subdir",
-      "installed_at": "2026-06-11T05:12:14.068375+08:00",
+      "installed_at": "2026-06-11T08:53:22.968035+08:00",
       "repo_url": "https://github.com/runkids/my-skills.git",
       "subdir": "feature-radar/feature-radar-archive",
       "version": "6003d18",
@@ -245,7 +245,7 @@
     "feature-radar-learn": {
       "source": "github.com/runkids/my-skills/feature-radar/feature-radar-learn",
       "type": "github-subdir",
-      "installed_at": "2026-06-11T05:12:15.507974+08:00",
+      "installed_at": "2026-06-11T08:53:24.316248+08:00",
       "repo_url": "https://github.com/runkids/my-skills.git",
       "subdir": "feature-radar/feature-radar-learn",
       "version": "6003d18",
@@ -257,7 +257,7 @@
     "feature-radar-ref": {
       "source": "github.com/runkids/my-skills/feature-radar/feature-radar-ref",
       "type": "github-subdir",
-      "installed_at": "2026-06-11T05:12:17.031084+08:00",
+      "installed_at": "2026-06-11T08:53:25.634047+08:00",
       "repo_url": "https://github.com/runkids/my-skills.git",
       "subdir": "feature-radar/feature-radar-ref",
       "version": "6003d18",
@@ -269,7 +269,7 @@
     "feature-radar-scan": {
       "source": "github.com/runkids/my-skills/feature-radar/feature-radar-scan",
       "type": "github-subdir",
-      "installed_at": "2026-06-11T05:12:18.579401+08:00",
+      "installed_at": "2026-06-11T08:53:26.997422+08:00",
       "repo_url": "https://github.com/runkids/my-skills.git",
       "subdir": "feature-radar/feature-radar-scan",
       "version": "6003d18",
@@ -279,9 +279,9 @@
       }
     },
     "frontend-design": {
-      "source": "github.com/anthropics/skills/skills/frontend-design",
+      "source": "https://github.com/anthropics/skills.git/skills/frontend-design",
       "type": "github-subdir",
-      "installed_at": "2026-06-11T05:12:20.052268+08:00",
+      "installed_at": "2026-06-11T08:53:10.440559+08:00",
       "repo_url": "https://github.com/anthropics/skills.git",
       "subdir": "skills/frontend-design",
       "version": "5754626",
@@ -294,7 +294,7 @@
     "grill-me": {
       "source": "https://github.com/runkids/my-skills.git/mattpocock/grill-me",
       "type": "github-subdir",
-      "installed_at": "2026-06-11T05:12:21.541592+08:00",
+      "installed_at": "2026-06-11T08:53:11.55808+08:00",
       "repo_url": "https://github.com/runkids/my-skills.git",
       "subdir": "mattpocock/grill-me",
       "version": "6003d18",
@@ -304,9 +304,9 @@
       }
     },
     "internal-comms": {
-      "source": "github.com/anthropics/skills/skills/internal-comms",
+      "source": "https://github.com/anthropics/skills.git/skills/internal-comms",
       "type": "github-subdir",
-      "installed_at": "2026-06-11T05:12:22.991994+08:00",
+      "installed_at": "2026-06-11T08:53:10.569233+08:00",
       "repo_url": "https://github.com/anthropics/skills.git",
       "subdir": "skills/internal-comms",
       "version": "5754626",
@@ -321,9 +321,9 @@
       }
     },
     "mcp-builder": {
-      "source": "github.com/anthropics/skills/skills/mcp-builder",
+      "source": "https://github.com/anthropics/skills.git/skills/mcp-builder",
       "type": "github-subdir",
-      "installed_at": "2026-06-11T05:12:24.585082+08:00",
+      "installed_at": "2026-06-11T08:53:10.505267+08:00",
       "repo_url": "https://github.com/anthropics/skills.git",
       "subdir": "skills/mcp-builder",
       "version": "5754626",
@@ -344,7 +344,7 @@
     "pdf": {
       "source": "https://github.com/anthropics/skills.git/skills/pdf",
       "type": "github-subdir",
-      "installed_at": "2026-06-11T05:12:26.133094+08:00",
+      "installed_at": "2026-06-11T08:53:10.422335+08:00",
       "repo_url": "https://github.com/anthropics/skills.git",
       "subdir": "skills/pdf",
       "version": "5754626",
@@ -367,7 +367,7 @@
     "react-best-practices": {
       "source": "https://github.com/runkids/my-skills.git/frontend/react/react-best-practices",
       "type": "github-subdir",
-      "installed_at": "2026-06-11T05:12:27.84524+08:00",
+      "installed_at": "2026-06-11T08:53:11.619015+08:00",
       "repo_url": "https://github.com/runkids/my-skills.git",
       "subdir": "frontend/react/react-best-practices",
       "version": "6003d18",
@@ -425,7 +425,7 @@
     "readme-i18n": {
       "source": "github.com/xixu-me/skills/readme-i18n",
       "type": "github-subdir",
-      "installed_at": "2026-06-11T05:12:30.678038+08:00",
+      "installed_at": "2026-06-11T08:53:20.26511+08:00",
       "repo_url": "https://github.com/xixu-me/skills.git",
       "subdir": "skills/readme-i18n",
       "version": "fa39ac2",
@@ -439,7 +439,7 @@
     "skillshare": {
       "source": "github.com/runkids/my-skills/skillshare",
       "type": "github-subdir",
-      "installed_at": "2026-06-11T05:12:35.323425+08:00",
+      "installed_at": "2026-06-11T08:53:28.400837+08:00",
       "repo_url": "https://github.com/runkids/my-skills.git",
       "subdir": "skillshare",
       "version": "6003d18",
@@ -463,7 +463,7 @@
     "slack": {
       "source": "https://github.com/runkids/my-skills.git/agent-browser/slack",
       "type": "github-subdir",
-      "installed_at": "2026-06-11T05:12:36.763469+08:00",
+      "installed_at": "2026-06-11T08:53:11.639499+08:00",
       "repo_url": "https://github.com/runkids/my-skills.git",
       "subdir": "agent-browser/slack",
       "version": "6003d18",
@@ -477,7 +477,7 @@
     "tauri-frontend-js": {
       "source": "github.com/dchuk/claude-code-tauri-skills/tauri/tauri-frontend-js",
       "type": "github-subdir",
-      "installed_at": "2026-06-11T05:12:44.279152+08:00",
+      "installed_at": "2026-06-11T08:53:14.481054+08:00",
       "repo_url": "https://github.com/dchuk/claude-code-tauri-skills.git",
       "subdir": "tauri/tauri-frontend-js",
       "version": "855352d",
@@ -489,7 +489,7 @@
     "tauri-v2": {
       "source": "github.com/nodnarbnitram/claude-code-extensions/.claude/skills/tauri-v2",
       "type": "github-subdir",
-      "installed_at": "2026-06-11T05:12:45.913616+08:00",
+      "installed_at": "2026-06-11T08:53:13.155475+08:00",
       "repo_url": "https://github.com/nodnarbnitram/claude-code-extensions.git",
       "subdir": ".claude/skills/tauri-v2",
       "version": "35e7f7d",
@@ -508,7 +508,7 @@
     "tdd": {
       "source": "https://github.com/runkids/my-skills.git/mattpocock/tdd",
       "type": "github-subdir",
-      "installed_at": "2026-06-11T05:12:47.437039+08:00",
+      "installed_at": "2026-06-11T08:53:11.653772+08:00",
       "repo_url": "https://github.com/runkids/my-skills.git",
       "subdir": "mattpocock/tdd",
       "version": "6003d18",
@@ -525,7 +525,7 @@
     "vercel-sandbox": {
       "source": "https://github.com/runkids/my-skills.git/agent-browser/vercel-sandbox",
       "type": "github-subdir",
-      "installed_at": "2026-06-11T05:12:58.638996+08:00",
+      "installed_at": "2026-06-11T08:53:11.668096+08:00",
       "repo_url": "https://github.com/runkids/my-skills.git",
       "subdir": "agent-browser/vercel-sandbox",
       "version": "6003d18",
@@ -535,9 +535,9 @@
       }
     },
     "web-artifacts-builder": {
-      "source": "github.com/anthropics/skills/skills/web-artifacts-builder",
+      "source": "https://github.com/anthropics/skills.git/skills/web-artifacts-builder",
       "type": "github-subdir",
-      "installed_at": "2026-06-11T05:13:00.519784+08:00",
+      "installed_at": "2026-06-11T08:53:10.550005+08:00",
       "repo_url": "https://github.com/anthropics/skills.git",
       "subdir": "skills/web-artifacts-builder",
       "version": "5754626",
@@ -551,9 +551,9 @@
       }
     },
     "webapp-testing": {
-      "source": "github.com/anthropics/skills/skills/webapp-testing",
+      "source": "https://github.com/anthropics/skills.git/skills/webapp-testing",
       "type": "github-subdir",
-      "installed_at": "2026-06-11T07:02:32.13956+08:00",
+      "installed_at": "2026-06-11T08:53:10.527378+08:00",
       "repo_url": "https://github.com/anthropics/skills.git",
       "subdir": "skills/webapp-testing",
       "version": "5754626",
