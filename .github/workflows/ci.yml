@@ -68,8 +68,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: skillshare install -p
 
+      # --no-tui:CI 非互動環境必加,否則 TUI 退出碼會錯回 1
+      # -T critical:對齊 config 的 block_threshold,只有 CRITICAL 才擋(容忍 vendored skill 的 HIGH)
       - name: 安全掃描 (掃到 CRITICAL 擋 PR)
-        run: skillshare audit -p
+        run: skillshare audit -p --no-tui -T critical
 
       - name: sync dry-run (驗證派發無誤)
         run: skillshare sync -p --dry-run
