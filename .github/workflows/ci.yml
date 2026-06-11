@@ -51,3 +51,25 @@ jobs:
             exit 1
           fi
           echo "未發現大檔案"
+
+  skillshare:
+    name: Skillshare (audit + sync 驗證)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup skillshare
+        uses: runkids/setup-skillshare@v1
+
+      # CI checkout 後 .skillshare/skills cache 是 gitignored(空),先依 config 重建
+      - name: 依 config 重建 cache (project)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: skillshare install -p
+
+      - name: 安全掃描 (掃到 CRITICAL 擋 PR)
+        run: skillshare audit -p
+
+      - name: sync dry-run (驗證派發無誤)
+        run: skillshare sync -p --dry-run

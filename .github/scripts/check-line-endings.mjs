@@ -93,11 +93,11 @@ function walk(dir) {
 walk(ROOT);
 
 if (violations.length === 0) {
-  console.log('✅ 換行符檢查通過(全 repo 符合 .gitattributes 規範)');
+  console.log('換行符檢查通過(全 repo 符合 .gitattributes 規範)');
   process.exit(0);
 }
 
-console.log(`❌ 換行符違規 ${violations.length} 個檔案:\n`);
+console.log(`換行符違規 ${violations.length} 個檔案:\n`);
 for (const v of violations) {
   console.log(`  [${v.want} 應該,實際 ${v.has}] ${v.file.replace(ROOT, '.').replace(/\\/g, '/')}`);
 }
